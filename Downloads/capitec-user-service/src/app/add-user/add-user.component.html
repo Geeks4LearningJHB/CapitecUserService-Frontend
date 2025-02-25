@@ -1,0 +1,41 @@
+<div class="admin-login-page slds-media_center slds-grid_align-spread slds-grid slds-container_fluid" style="width: 100%;">
+    <div class="login-container slds-text-align_center slds-container_fluid" style="width: 100%;">
+      <h3>Add User Information</h3>
+      <form (submit)="addUser(); $event.preventDefault()">
+        <div class="form-group slds-text-align_left">
+          <ion-item>
+            <ion-label position="floating">Name</ion-label>
+            <ion-input type="text" name="name" [(ngModel)]="user.name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Surname</ion-label>
+            <ion-input type="text" name="surname" [(ngModel)]="user.surname"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">ID Number</ion-label>
+            <ion-input type="text" name="id_number" [(ngModel)]="user.id_number"></ion-input>
+          </ion-item>
+        </div>
+  
+        <div *ngIf="LoggingIn" class="loading-overlay">
+          <div class="slds-text-align_center loading-content">
+            <p>{{ successMessage }}</p>
+            <div class="spinner"></div>
+          </div>
+        </div>
+  
+        
+  
+        <ion-button type="submit"> 
+          Add User 
+        </ion-button>
+      
+      </form>
+    </div>
+    
+  
+    <div class="logo-container">
+      <img src="assets/g4l_logo.jpeg" alt="Geeks4Learning Logo" class="logo slds-float_right slds-large-size_6-of-12" />
+    </div>
+  </div>
+  
