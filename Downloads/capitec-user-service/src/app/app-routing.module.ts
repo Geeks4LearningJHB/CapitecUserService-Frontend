@@ -5,10 +5,13 @@ import { UserListComponent } from './user-list/user-list.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'add-user', component: AddUserComponent },
   { path: 'user-list', component: UserListComponent },
-  { path: 'home', component: HomeComponent }
+
+  // Wildcard: either redirect to home or show a 404 component
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({

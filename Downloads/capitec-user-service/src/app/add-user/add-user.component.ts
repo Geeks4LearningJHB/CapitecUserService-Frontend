@@ -16,16 +16,16 @@ export class AddUserComponent implements OnInit {
   successMessage: string = '';
   loading: boolean = false;
   user: any = {
-    name: '',
-    surname: '',
-    idNumber: '',
+    username: '',
+    email: '',
+    //idNumber: '',
     password: 'thapelo@1234'
   }
 
   constructor(private user_svc: UserService, private router: Router) {}
 
   ngOnInit(): void {
-      
+
   }
 
   addUser() {
@@ -42,7 +42,7 @@ export class AddUserComponent implements OnInit {
       console.log(error);
       this.loginError = 'User not added';
       this.loading = false;
-    
+
     });
   }
 
