@@ -13,7 +13,7 @@ FROM nginx:alpine
 COPY --from=build /app/dist/capitec-user-service-frontend /usr/share/nginx/html
 
 # Copy custom Nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy and set up entrypoint script
 COPY entrypoint.sh /entrypoint.sh

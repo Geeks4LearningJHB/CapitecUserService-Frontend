@@ -14,8 +14,8 @@ set -e  # Exit immediately if a command exits with a non-zero status
 
 docker buildx build --platform linux/amd64 -t capitec-user-service-frontend:amd64 --load .
 
-docker tag capitec-user-service-frontend:amd64 thapeloseema/capitec-user-service:frontend-amd64v1.0.4
+docker tag capitec-user-service-frontend:amd64 thapeloseema/capitec-user-service:frontend-amd64v1.0.6
 
-docker push thapeloseema/capitec-user-service:frontend-amd64v1.0.4
+docker push thapeloseema/capitec-user-service:frontend-amd64v1.0.6
 # Step 3: Start the Docker Compose services
 ##docker-compose up
